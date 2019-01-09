@@ -120,7 +120,7 @@ $(window).ready(function() {
   //auto scroll animation for quote button
   $(".banner-button").click(function (){
     $('html, body').animate({
-        scrollTop: $("#about-us").offset().top - 175
+        scrollTop: $(".about-us").offset().top - 175
     }, 2000);
   });
 
