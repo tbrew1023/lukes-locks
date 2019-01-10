@@ -20,12 +20,14 @@ function toggleMenu() {
     menuActive = false;
     $(".nav-links").css("display", "none");
     $(".nav").css("height", "80px");
+    $(".nav-secondary").css("height", "80px");
     $(".menu-button").css("background-image","url('https://cdn4.iconfinder.com/data/icons/wirecons-free-vector-icons/32/menu-alt-512.png')");
   }
   else {
     menuActive = true;
     $(".nav-links").css("display", "block");
     $(".nav").css("height", "100vh");
+    $(".nav-secondary").css("height", "100vh");
     $(".menu-button").css("background-image", "url('https://cdn2.iconfinder.com/data/icons/media-controls-5/100/close-512.png')");
   }
 }

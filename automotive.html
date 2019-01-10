@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<!--
+Developer: Trent Brew
+Description: Markup for lukeslocks.com
+-->
+<html>
+  <head>
+    <title>Luke's Locks | Automotive</title>
+    <meta charset="utf-8"/>
+    <link rel="icon" href="res/lock.png"/>
+    <link type="text/css" rel="stylesheet" href="styles/compiled-styles.css"/>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    <script type="text/javascript" src="scripts/scripts.js"></script>
+  </head>
+  <body>
+      <div class="top-bar">Luke Barden | Mobile Locksmith<div class="phone-icon"></div>0424 348 648<div class="email-icon"></div>luke@lukeslocks.com.au</div>
+      <div class="nav-secondary">
+        <div class="logo"></div>
+        <div class="nav-links">
+          <ul>
+            <a href="index.html"><li>Home</li></a>
+            <a href="residential.html"><li>Residential</li></a>
+            <a href="automotive.html" class="active"><li>Automotive</li></a>
+            <a href="commercial.html"><li>Commercial</li></a>
+            <a href="contact.html"><li>Contact</li></a>
+          </ul>
+        </div>
+        <div class="menu-button"></div>
+      </div>
+
+      <div class="banner-secondary" id="banner-automotive">
+        <div class="inner-banner"><h2><div class="title-icon" id="automotive"></div>Automotive Locksmith</h2></div>
+        <p>"Very professional and does quality work! Went above and beyond to help sort out multiple lock issues. Highly recommend." -Joe B.</p>
+      </div>
+
+      <!-- service container used across each service tab -->
+      <div class="content-row service-box">
+        <div class="service-box-text">
+          <h2><div class="title-icon" id="automotive"></div><strong>Accidents happen</strong></h2>
+          <p>Have you accidentally locked yourself out of the car? Have you lost your keys or had them stolen? Or maybe you have been unlucky enough to have broken your key in the lock. Luke’s Locks can assist you regardless of the time or location, and at very competitive rates. Our services include the following: Locked Vehicles opened; Broken keys removed from locks; Door locks, boot locks and Ignitions repaired or replaced;
+ Replacement keys for some vehicles.</p>
+        </div>
+        <div class="quote-forms">
+          <form>
+            <h2>Request a Quote</h2>
+            <input type="text" class="form" id="name" placeholder="Name"></input>
+            <input type="text" class="form" id="phone" placeholder="Phone"></input>
+            <!--div class="form" id="zip"></div-->
+            <textarea type="text" class="form" id="message" placeholder="Message" rows="10" cols="30"></textarea>
+            <input type="submit" value="Submit" class="submit"></input>
+          </form>
+        </div>
+      </div>
+
+      <!-- row 5 (footer) -->
+      <div class="footer">
+        <div class="inner-footer">
+          <div class="footer-col" id="col1"><div class="footer-logo"></div></div>
+          <div class="footer-col" id="col2">
+            <ul>
+              <h3>Contact</h3>
+                <li>Luke Barden | Mobile Locksmith</li>
+                <li><a href="#">Phone: <strong>0424 348 648</strong></a></li>
+                <li><a href="#">Email: <strong>luke@lukeslocks.com.au</strong></a></li>
+              </ul>
+            </div>
+            <div class="footer-col" id="col3">
+              <ul>
+                <h3>Services</h3>
+                <li><a href="residential.html">Residential Locksmith</a></li>
+                <li><a href="automotive.html">Automotive Locksmith</a></li>
+                <li><a href="commercial.html">Commercial Locksmith</a></li>
+              </ul>
+            </div>
+            <div class="footer-col" id="col3">
+              <h3>Follow Us</h3>
+              <div class="bubble-container">
+                <a href="https://www.facebook.com/lukeslocks/"><div class="social-bubble" id="facebook"></div></a>
+                <a href="https://plus.google.com/+LukesLocksSouthMorang"><div class="social-bubble" id="google-plus"></div></a>
+                <a href="#"><div class="social-bubble" id="twitter"></div></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="sub-footer"><span>© Copyright 2019 Luke's Locks | All Rights Reserved | Site Developed by </span><a href="#">Trent Brew</a></div>
+
+  </body>
+</html>
