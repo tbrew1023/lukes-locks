@@ -968,10 +968,7 @@ body {
 
   .submit {
     width: 100% !important;
-    height: 60px !important; }
-
-  .single-page {
-    height: inherit; } }
+    height: 60px !important; } }
 /*@media only screen and (max-width: 1000px) {
   body {
     background-color: red !important;
