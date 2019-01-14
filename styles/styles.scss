@@ -1111,6 +1111,10 @@ body {
   }
 }
 
+.mobile-banner {
+  display: none;
+}
+
 //------------------------------mobile styles----------------------------------
 
 @media only screen and (max-width: 768px) {
@@ -1119,7 +1123,7 @@ body {
   }
 
   .top-bar {
-    font-size: 8px;
+    font-size: 9px;
   }
 
   .logo {
@@ -1282,7 +1286,7 @@ body {
 
   .service-box {
     //margin-top: -50px !important;
-    padding: 150px 50px 50px 50px;
+    padding: 30px 50px 50px 50px;
     grid-template-columns: 1fr !important;
     position: relative;
     text-align: center;
@@ -1294,6 +1298,7 @@ body {
         font-size: 24px !important;
         font-weight: bold;
         padding-left: 0px;
+        margin: 0px 0px 30px 0px;
       }
 
       p {
@@ -1306,10 +1311,21 @@ body {
     .quote-forms {
       margin-top: 0px;
       border-radius: 15px !important;
+
+      h2 {
+        font-size: 24px;
+        font-weight: bold;
+      }
+    }
+
+    .form {
+      padding-right: 0px;
     }
 
     .title-icon {
-      display: block !important;
+      //display: block !important;
+      padding: 0px;
+      margin: 0px;
     }
   }
 
@@ -1359,7 +1375,30 @@ body {
   }
 
   .banner-secondary {
-    display: none;
+    //display: none;
+    width: 100%;
+    height: 350px;
+    background-attachment: scroll;
+
+    h2 {
+      font-size: 28px;
+    }
+
+    .title-icon {
+      width: 60px;
+      height: 60px;
+    }
+
+    .inner-banner {
+      width: 90%;
+      line-height: 60px;
+      top: 140px;
+    }
+
+    p {
+      width: 70%;
+      padding-top: 145px;
+    }
   }
 
   .contact-box {
@@ -1410,6 +1449,10 @@ body {
 
   .single-page {
 
+  }
+
+  .mobile-banner {
+    display: block;
   }
 }
 
