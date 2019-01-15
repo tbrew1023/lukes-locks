@@ -5,6 +5,9 @@ body {
   body h1, body h2 {
     font-weight: lighter; }
 
+::selection {
+  color: black; }
+
 .service-box {
   padding: 100px;
   background-color: white;
@@ -34,7 +37,7 @@ body {
       color: rgba(0, 0, 0, 0.5); }
   .service-box .quote-forms {
     padding: 20px 40px 40px 40px;
-    background-color: #1976d2;
+    background-color: #329693;
     border-radius: 15px;
     color: white; }
   .service-box .form {
@@ -55,7 +58,7 @@ body {
     float: left;
     height: 40px;
     border: 2px white solid;
-    background-color: #1976d2;
+    background-color: #329693;
     border-radius: 10px;
     margin-top: 10px;
     text-align: center;
@@ -64,7 +67,7 @@ body {
     color: white; }
     .service-box .submit:hover {
       background-color: white;
-      color: #1976d2;
+      color: #329693;
       cursor: pointer; }
   .service-box #message {
     height: 100px;
@@ -76,17 +79,17 @@ body {
     margin-right: 20px;
     display: none; }
   .service-box #residential {
-    background-image: url("../res/house.png");
+    background-image: url("../res/house(teal).png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat; }
   .service-box #commercial {
-    background-image: url("../res/business.png");
+    background-image: url("../res/business(teal).png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat; }
   .service-box #automotive {
-    background-image: url("../res/car.png");
+    background-image: url("../res/car(teal).png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat; }
@@ -95,7 +98,7 @@ body {
   position: relative;
   width: 100%;
   height: calc(100vh - 90px);
-  background-color: #1976d2; }
+  background-color: #329693; }
   .single-page .sub-footer {
     position: absolute;
     bottom: 0 !important; }
@@ -137,7 +140,7 @@ body {
 
 .nav .logo {
   position: absolute;
-  background-image: url("../res/lukes-locks-full-light.png");
+  background-image: url("../res/lukes-locks(light).png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -151,7 +154,7 @@ body {
 
 .nav-secondary .logo {
   position: absolute;
-  background-image: url("../res/lukes-locks-full.png");
+  background-image: url("../res/lukes-locks(dark).png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -168,7 +171,7 @@ body {
   width: 100%;
   height: 30px;
   margin: 0px;
-  background-color: #1976d2;
+  background-color: #329693;
   z-index: 15;
   color: white;
   line-height: 30px;
@@ -285,7 +288,7 @@ body {
     transition: 300ms; }
     .banner .banner-button:hover {
       background-color: white;
-      color: #1976d2;
+      color: #329693;
       cursor: pointer; }
 
 .nav {
@@ -315,7 +318,7 @@ body {
         background-color: rgba(0, 0, 0, 0.1); }
 
 .active {
-  border-bottom: solid #1976d2 4px; }
+  border-bottom: solid #329693 4px; }
 
 .content {
   position: absolute;
@@ -382,7 +385,7 @@ body {
       background-color: white;
       padding: 20px 35px 30px 35px; }
       .content-home .card-container .hoverable:hover {
-        background-color: #1976d2;
+        background-color: #329693;
         margin-top: -10px;
         cursor: pointer; }
         .content-home .card-container .hoverable:hover h2 {
@@ -400,8 +403,7 @@ body {
       .content-home .card-container .card p {
         color: rgba(0, 0, 0, 0.5);
         transition: 500ms;
-        border-radius: 0px 0px 25px 25px;
-        padding: 0px 20px 20px 20px; }
+        border-radius: 0px 0px 25px 25px; }
       .content-home .card-container .card .icon {
         width: 80px;
         height: 80px;
@@ -414,17 +416,17 @@ body {
         transition: 500ms;
         opacity: 0.9; }
       .content-home .card-container .card #residential {
-        background-image: url("../res/house.png"); }
+        background-image: url("../res/house(teal).png"); }
       .content-home .card-container .card #automotive {
-        background-image: url("../res/car.png"); }
+        background-image: url("../res/car(teal).png"); }
       .content-home .card-container .card #commercial {
-        background-image: url("../res/business.png"); }
+        background-image: url("../res/business(teal).png"); }
       .content-home .card-container .card #hours {
-        background-image: url("../res/clock.png"); }
+        background-image: url("../res/clock(teal).png"); }
       .content-home .card-container .card #support {
-        background-image: url("../res/key.png"); }
+        background-image: url("../res/key(teal).png"); }
       .content-home .card-container .card #mobile {
-        background-image: url("../res/mobile.png"); }
+        background-image: url("../res/mobile(teal).png"); }
     .content-home .card-container #card1:hover .icon {
       background-image: url("../res/house(white).png"); }
     .content-home .card-container #card2:hover .icon {
@@ -456,7 +458,7 @@ body {
         color: rgba(0, 0, 0, 0.5); }
     .content-home .about-us .quote-forms {
       padding: 20px 40px 40px 40px;
-      background-color: #1976d2;
+      background-color: #329693;
       border-radius: 0px 15px 15px 0px;
       color: white; }
     .content-home .about-us .form {
@@ -477,7 +479,7 @@ body {
       float: left;
       height: 40px;
       border: 2px white solid;
-      background-color: #1976d2;
+      background-color: rgba(0, 0, 0, 0);
       border-radius: 10px;
       margin-top: 10px;
       text-align: center;
@@ -486,7 +488,7 @@ body {
       color: white; }
       .content-home .about-us .submit:hover {
         background-color: white;
-        color: #1976d2;
+        color: #329693;
         cursor: pointer; }
     .content-home .about-us #message {
       height: 100px;
@@ -569,7 +571,7 @@ body {
     background-color: #BDBDBD; }
 
 .footer {
-  background-color: #1976d2;
+  background-color: #329693;
   width: 100%;
   margin: 0px;
   height: 300px; }
@@ -598,7 +600,7 @@ body {
   .footer .footer-logo {
     width: 250px;
     height: 60px;
-    background-image: url("../res/logo(white).png");
+    background-image: url("../res/lukes-locks(white).png");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -622,7 +624,7 @@ body {
     padding-top: 60px; }
 
 .sub-footer {
-  background-color: #115495;
+  background-color: #226662;
   width: 100%;
   margin: 0px;
   height: 90px;
@@ -670,17 +672,17 @@ body {
     height: 120px;
     margin-right: 20px; }
   .banner-secondary #residential {
-    background-image: url("../res/house.png");
+    background-image: url("../res/house(teal).png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat; }
   .banner-secondary #commercial {
-    background-image: url("../res/business.png");
+    background-image: url("../res/business(teal).png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat; }
   .banner-secondary #automotive {
-    background-image: url("../res/car.png");
+    background-image: url("../res/car.png(teal)");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat; }
@@ -700,7 +702,7 @@ body {
       display: inline-flex; }
 
 .contact-box {
-  background-color: #1976d2;
+  background-color: #329693;
   border-radius: 0px;
   width: 70%;
   margin-left: auto;
@@ -733,11 +735,11 @@ body {
     background-size: cover;
     background-repeat: no-repeat; }
   .contact-box .service-box-text p {
-    background-color: #1976d2;
+    background-color: #329693;
     color: white; }
 
 .contact-content {
-  background-color: #1976d2;
+  background-color: #329693;
   padding-bottom: 70px !important; }
   .contact-content .bubble-container {
     text-align: center;
@@ -778,7 +780,7 @@ body {
 
   .logo {
     position: absolute;
-    background-image: url("../res/lukes-locks-full.png") !important;
+    background-image: url("../res/lukes-locks(dark).png") !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -951,9 +953,20 @@ body {
     margin: 0px;
     z-index: 15; }
 
+  #why-us {
+    height: auto !important; }
+
   #testimonials {
     position: relative;
     margin-top: 680px !important; }
+    #testimonials h1 {
+      margin: 40px !important; }
+    #testimonials .reviews-container {
+      width: 85% !important; }
+
+  .content-row {
+    display: block;
+    overflow: auto; }
 
   .banner-secondary {
     width: 100%;

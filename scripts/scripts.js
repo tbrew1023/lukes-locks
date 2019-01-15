@@ -60,7 +60,7 @@ function swoopLogo() {
     "left":"30px",
     "right":"100%",
     "top":"0px",
-    "background-image":"url('res/lukes-locks-full.png')"
+    "background-image":"url('res/lukes-locks(dark).png')"
   });
 
   $(".nav a").css({
@@ -77,7 +77,7 @@ function unswoopLogo() {
     "left":"0px",
     "right":"0px",
     "top":"-450px",
-    "background-image":"url('res/lukes-locks-full-light.png')"
+    "background-image":"url('res/lukes-locks(light).png')"
   });
 
   $(".nav a").css({
@@ -148,7 +148,7 @@ $(window).scroll(function() {
   scrollq = [scrollTemp, scroll];
 
   //conditionals below check whether navbar should be sticky or not
-  if($(".nav").width() >= 768) { //conditional prevents parallax on mobile
+  if($(".nav").width() > 768) { //conditional prevents parallax on mobile
     if(scroll >= (scrollLimit - navHeight - topbarHeight)) {
       lockNav();
     }

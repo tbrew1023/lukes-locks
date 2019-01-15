@@ -5,7 +5,8 @@
 
 $navHeight: 80px; //Height of navigatoin bar
 $navColor: #FFFFFF; //Color of navigation bar
-$colorPrimary: #1976d2; //Main theme color
+$colorPrimary: #329693; //Main theme color
+$colorPrimaryDark: #226662; //Color for subfooter
 $bannerHeight: 650px; //Height of main banner
 $topbarHeight: 30px;
 
@@ -19,6 +20,11 @@ body {
   h1, h2 {
     font-weight: lighter;
   }
+}
+
+::selection {
+  color: black;
+  //background: orange;
 }
 
 .service-box {
@@ -120,21 +126,21 @@ body {
   }
 
   #residential {
-    background-image: url("../res/house.png");
+    background-image: url("../res/house(teal).png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
   }
 
   #commercial {
-    background-image: url("../res/business.png");
+    background-image: url("../res/business(teal).png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
   }
 
   #automotive {
-    background-image: url("../res/car.png");
+    background-image: url("../res/car(teal).png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -208,7 +214,7 @@ body {
 
 .nav .logo {
   position: absolute;
-  background-image: url("../res/lukes-locks-full-light.png");
+  background-image: url("../res/lukes-locks(light).png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -223,7 +229,7 @@ body {
 
 .nav-secondary .logo {
   position: absolute;
-  background-image: url("../res/lukes-locks-full.png");
+  background-image: url("../res/lukes-locks(dark).png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -243,6 +249,7 @@ body {
   height: $topbarHeight;
   margin: 0px;
   background-color: $colorPrimary;
+  //background-image: linear-gradient(-213deg,$colorPrimary 22%,$colorPrimaryDark 100%);
   z-index: 15;
   color: white;
   line-height: $topbarHeight;
@@ -350,6 +357,10 @@ body {
   background-attachment: fixed;
   height: $bannerHeight;
   width: 100%;
+
+  &:after {
+    //background-image: linear-gradient(-213deg,$colorPrimary 22%,$colorPrimaryDark 100%);
+  }
 
   .subtitle {
     position: absolute;
@@ -557,7 +568,7 @@ body {
         color: rgba(black,0.5);
         transition: 500ms;
         border-radius: 0px 0px 25px 25px;
-        padding: 0px 20px 20px 20px;
+        //padding: 0px 20px 20px 20px;
       }
 
       .icon {
@@ -575,27 +586,27 @@ body {
       }
 
       #residential {
-        background-image: url("../res/house.png");
+        background-image: url("../res/house(teal).png");
       }
 
       #automotive {
-        background-image: url("../res/car.png");
+        background-image: url("../res/car(teal).png");
       }
 
       #commercial {
-        background-image: url("../res/business.png");
+        background-image: url("../res/business(teal).png");
       }
 
       #hours {
-        background-image: url("../res/clock.png");
+        background-image: url("../res/clock(teal).png");
       }
 
       #support {
-        background-image: url("../res/key.png");
+        background-image: url("../res/key(teal).png");
       }
 
       #mobile {
-        background-image: url("../res/mobile.png");
+        background-image: url("../res/mobile(teal).png");
       }
     }
 
@@ -657,6 +668,7 @@ body {
     .quote-forms {
       padding: 20px 40px 40px 40px;
       background-color: $colorPrimary;
+      //background-image: linear-gradient(-213deg,$colorPrimary 22%,$colorPrimaryDark 100%);
       border-radius: 0px 15px 15px 0px;
       color: white;
     }
@@ -683,7 +695,7 @@ body {
       float: left;
       height: 40px;
       border: 2px white solid;
-      background-color: $colorPrimary;
+      background-color: rgba(black, 0);
       border-radius: 10px;
       margin-top: 10px;
       text-align: center;
@@ -823,6 +835,7 @@ body {
 
 .footer {
   background-color: $colorPrimary;
+  //background-image: linear-gradient(-213deg,$colorPrimary 22%,$colorPrimaryDark 100%);
   width: 100%;
   margin: 0px;
   height: 300px;
@@ -868,7 +881,7 @@ body {
     //background-color: red;
     width: 250px;
     height: 60px;
-    background-image: url("../res/logo(white).png");
+    background-image: url("../res/lukes-locks(white).png");
     background-position: center;
     background-size: contain;
     background-repeat: no-repeat;
@@ -904,7 +917,7 @@ body {
 }
 
 .sub-footer {
-  background-color: #115495;
+  background-color: $colorPrimaryDark;
   width: 100%;
   margin: 0px;
   height: 90px;
@@ -968,21 +981,21 @@ body {
   }
 
   #residential {
-    background-image: url("../res/house.png");
+    background-image: url("../res/house(teal).png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
   }
 
   #commercial {
-    background-image: url("../res/business.png");
+    background-image: url("../res/business(teal).png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
   }
 
   #automotive {
-    background-image: url("../res/car.png");
+    background-image: url("../res/car.png(teal)");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -1128,7 +1141,7 @@ body {
 
   .logo {
     position: absolute;
-    background-image: url("../res/lukes-locks-full.png") !important;
+    background-image: url("../res/lukes-locks(dark).png") !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
@@ -1372,18 +1385,29 @@ body {
     z-index: 15;
   }
 
-  #why-us {
+  #why-us { //u gotta go son
     //background-color: black;
+    height: auto !important;
   }
 
   #testimonials {
-      position: relative;
-      margin-top: 680px !important;
+    position: relative;
+    margin-top: 680px !important;
+
+    h1 {
+      margin: 40px !important;
+    }
+
+    .reviews-container {
+      width: 85% !important;
+    }
   }
 
   .content-row {
     //background-color: gray;
     //height:fit-content;
+    display: block;
+    overflow: auto;
   }
 
   .banner-secondary {
