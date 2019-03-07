@@ -332,6 +332,7 @@ body h1, body h2 {
 .banner .banner-button-container .banner-button-cta {
   position: relative;
   text-align: center;
+  text-decoration: none;
   width: 130px;
   height: 40px;
   color: white;
@@ -1305,6 +1306,7 @@ body h1, body h2 {
   }
   .mobile-banner .banner-button-container .banner-button-cta {
     position: relative;
+    text-decoration: none;
     text-align: center;
     width: 130px;
     height: 40px;
