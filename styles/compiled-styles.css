@@ -317,23 +317,49 @@ body h1, body h2 {
   width: 600px;
   line-height: 25px;
 }
-.banner .banner-button {
+.banner .banner-button-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-items: center;
+  grid-gap: 11px;
+  width: 280px;
   position: absolute;
+  left: 0px;
+  right: 0px;
+  margin: auto;
+  top: 370px;
+}
+.banner .banner-button-container .banner-button-cta {
+  position: relative;
+  text-align: center;
   width: 130px;
   height: 40px;
+  color: white;
+  background-color: #329693;
+  line-height: 40px;
+  font-weight: bolder;
+  border-radius: 5px;
+  border: solid #329693 2px;
+  transition: 300ms;
+}
+.banner .banner-button-container .banner-button-cta:hover {
+  background-color: white;
+  color: #329693;
+  cursor: pointer;
+}
+.banner .banner-button-container .banner-button {
+  position: relative;
   text-align: center;
+  width: 130px;
+  height: 40px;
   color: white;
   line-height: 40px;
   font-weight: bolder;
   border-radius: 5px;
   border: solid white 2px;
-  left: 0px;
-  right: 0px;
-  margin: auto;
-  top: 370px;
   transition: 300ms;
 }
-.banner .banner-button:hover {
+.banner .banner-button-container .banner-button:hover {
   background-color: white;
   color: #329693;
   cursor: pointer;
@@ -1021,7 +1047,7 @@ body h1, body h2 {
   .content-home {
     width: 100%;
     padding-top: 20px;
-    top: 460px;
+    top: 310px;
   }
 
   .card-container {
@@ -1246,7 +1272,7 @@ body h1, body h2 {
 
   .mobile-banner {
     display: block;
-    height: 350px;
+    height: 200px;
     width: 100%;
     margin-top: 110px;
     background-image: url("../res/banner1.jpg");
@@ -1255,9 +1281,68 @@ body h1, body h2 {
     background-repeat: no-repeat;
     background-attachment: fixed;
   }
+  .mobile-banner .subtitle {
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    text-align: center;
+    color: white;
+    top: 120px;
+    line-height: 20px;
+  }
+  .mobile-banner .banner-button-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    grid-gap: 11px;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    margin: auto;
+    top: 220px;
+    width: 280px;
+  }
+  .mobile-banner .banner-button-container .banner-button-cta {
+    position: relative;
+    text-align: center;
+    width: 130px;
+    height: 40px;
+    color: white;
+    background-color: #329693;
+    line-height: 40px;
+    font-weight: bolder;
+    border-radius: 5px;
+    border: solid #329693 2px;
+    transition: 300ms;
+  }
+  .mobile-banner .banner-button-container .banner-button-cta:hover {
+    background-color: white;
+    color: #329693;
+    cursor: pointer;
+  }
+  .mobile-banner .banner-button-container .banner-button {
+    position: relative;
+    text-align: center;
+    width: 130px;
+    height: 40px;
+    color: white;
+    line-height: 40px;
+    font-weight: bolder;
+    border-radius: 5px;
+    border: solid white 2px;
+    transition: 300ms;
+  }
+  .mobile-banner .banner-button-container .banner-button:hover {
+    background-color: white;
+    color: #329693;
+    cursor: pointer;
+  }
 }
 /*@media only screen and (max-width: 1000px) {
   body {
     background-color: red !important;
   }
 }*/
+
+/*# sourceMappingURL=compiled-styles.css.map */
