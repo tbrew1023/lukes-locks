@@ -5,15 +5,15 @@
 
 $navHeight: 80px; //Height of navigatoin bar
 $navColor: #FFFFFF; //Color of navigation bar
-$colorPrimary: #329693; //Main theme color
-$colorPrimaryDark: #226662; //Color for subfooter
+$colorPrimary: #0288d1; //Main theme color
+$colorPrimaryDark: #005b9f; //Color for subfooter
 $bannerHeight: 650px; //Height of main banner
 $topbarHeight: 30px;
 
 //-----------------------------desktop styles----------------------------------
 
 body {
-  background-color: white;
+  background-color: gray;
   margin: 0px;
   font-family: Roboto, sans-serif;
 
@@ -31,7 +31,7 @@ body {
   padding: 100px;
   background-color: white;
   //height: 450px;
-  border-radius: 15px;
+  //border-radius: 15px;
   display: grid;
   grid-template-columns: 1fr 1fr;
   color: black;
@@ -126,21 +126,21 @@ body {
   }
 
   #residential {
-    background-image: url("../res/house(teal).png");
+    background-image: url("../res/icons/house.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
   }
 
   #commercial {
-    background-image: url("../res/business(teal).png");
+    background-image: url("../res/icons/business.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
   }
 
   #automotive {
-    background-image: url("../res/car(teal).png");
+    background-image: url("../res/icons/car.png");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -179,7 +179,8 @@ body {
   //transition: 300ms;
   z-index: 10;
   top: $topbarHeight;
-  box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.1);
+  //box-shadow: 0px 10px 25px 0px rgba(0,0,0,0.1);
+  border-radius: 1px solid #BDBDBD;
 
   .nav-links {
     display: block;
@@ -203,10 +204,10 @@ body {
       //transition: 300ms;
       padding: 0px 15px 0px 15px;
       font-weight: bold;
-      //transition: 500ms;
+      transition: 500ms;
 
       &:hover {
-        background-color: rgba(black, 0.1);
+        //background-color: rgba(black, 0.1);
       }
     }
   }
@@ -214,31 +215,32 @@ body {
 
 .nav .logo {
   position: absolute;
-  background-image: url("../res/lukes-locks(light-new).png");
+  background-image: url("../res/logo(white).png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
-  width: 400px;
+  background-size: cover;
+  width: 350px;
   height: 200px;
   margin: auto;
   left: 0px;
   right: 0px;
   top: -450px;
   transition: 500ms;
+  //border: solid 3 px #BDBDBD;
 }
 
 .nav-secondary .logo {
   position: absolute;
-  background-image: url("../res/lukes-locks(dark-new).png");
+  background-image: url("../res/logo(dark).png");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
-  width: 150px;
-  height: 75px;
+  background-size: cover;
+  width: 120px;
+  height: 55px;
   margin: auto;
   left: 30px;
   right: 100%;
-  top: 0px;
+  top: 12px;
   //transition: 500ms;
 }
 
@@ -255,7 +257,7 @@ body {
   line-height: $topbarHeight;
   padding-left: 10px;
   font-size: 14px;
-  top: 0px;
+  top:0px;
 
   .phone-icon {
     width: 22px;
@@ -283,79 +285,77 @@ body {
 }
 
 .arrow-container {
-  position: absolute;
-  //background-color: black;
-  width: 200px;
-  height: 150px;
-  margin: auto;
-  top: 350px;
-  left: 0px;
-  right: 0px;
-  bottom: 0;
-  opacity: 0.6;
-}
+    position: absolute;
+    //background-color: black;
+    width: 200px;
+    height: 150px;
+    margin: auto;
+    top: 350px;
+    left: 0px;
+    right: 0px;
+    bottom: 0;
+    opacity: 0.6;
+  }
 
-.arrow {
-  opacity: 0;
-  position: relative;
-  left: 42%;
-  top: 65%;
-  transition: visibility 500ms linear;
-}
-
-.arrow1 {
-  animation: arrow-movement 2s ease-in-out infinite;
-}
-
-.arrow2 {
-  animation: arrow-movement 2s 1s ease-in-out infinite;
-}
-
-.arrow:before,
-.arrow:after {
-  background: white;
-  content: '';
-  display: block;
-  height: 2px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 30px;
-}
-
-.arrow:before {
-  transform: rotate(45deg) translateX(-23%);
-  transform-origin: top left;
-}
-
-.arrow:after {
-  transform: rotate(-45deg) translateX(23%);
-  transform-origin: top right;
-}
-
-// Animation
-@keyframes arrow-movement {
-  0% {
+  .arrow {
     opacity: 0;
-    top: 45%;
+    position: relative;
+    left: 42%;
+    top: 65%;
+    transition: visibility 500ms linear;
   }
-  70% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
 
-.banner {
+  .arrow1 {
+    animation: arrow-movement 2s ease-in-out infinite;
+  }
+  .arrow2 {
+    animation: arrow-movement 2s 1s ease-in-out infinite;
+  }
+
+  .arrow:before,
+  .arrow:after {
+    background: white;
+    content: '';
+    display: block;
+    height: 2px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30px;
+  }
+
+  .arrow:before {
+    transform: rotate(45deg) translateX(-23%);
+    transform-origin: top left;
+  }
+
+  .arrow:after {
+    transform: rotate(-45deg) translateX(23%);
+    transform-origin: top right;
+  }
+
+  // Animation
+  @keyframes arrow-movement {
+    0% {
+      opacity: 0;
+      top: 45%;
+    }
+    70% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+
+.banner-container {
   position: absolute;
   top: $topbarHeight;
-  background-color: white;
-  background-image: url("../res/banner1.jpg");
-  background-repeat: no-repeat;
+  background: linear-gradient($colorPrimary);
+  //background-image: url("../res/banner-background.png");
+  background-position: bottom;
   background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background-repeat: no-repeat;
   height: $bannerHeight;
   width: 100%;
 
@@ -370,64 +370,59 @@ body {
     margin: auto;
     text-align: center;
     color: white;
-    top: 260px;
+    top: 280px;
     width: 600px;
     line-height: 25px;
   }
 
   .banner-button-container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    justify-items: center;
-    grid-gap: 11px;
-    width: 280px;
-    position: absolute;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #call {
+    background-color: white;
+    color: $colorPrimary;
+
+    &:hover {
+      //background-color: rgba(0,0,0,0.5);
+      //border-color: rgba(0,0,0,0);
+      //color: white;
+      border-radius: 60px;
+    }
+  }
+
+  .i-home-active {
+    background-color: white !important;
+  }
+
+  .banner-button {
+    position: relative;
+    //background-color: $colorPrimary;
+    width: 130px;
+    height: 40px;
+    text-align: center;
+    color: white;
+    line-height: 40px;
+    font-weight: bolder;
+    border-radius: 10px;
+    border: solid white 2px;
     left: 0px;
     right: 0px;
     margin: auto;
-    top: 370px;
+    top: 390px;
+    transition: 300ms;
 
-    .banner-button-cta {
-      position: relative;
-      text-align: center;
-      text-decoration: none;
-
-      width: 130px;
-      height: 40px;
-      color: white;
-      background-color: $colorPrimary;
-      line-height: 40px;
-      font-weight: bolder;
-      border-radius: 5px;
-      border: solid $colorPrimary 2px;
-      transition: 300ms;
-
-
-      &:hover {
-        background-color: white;
-        color: $colorPrimary;
-        cursor: pointer;
-      }
-    }
-
-    .banner-button {
-      position: relative;
-      text-align: center;
-      width: 130px;
-      height: 40px;
-      color: white;
-      line-height: 40px;
-      font-weight: bolder;
-      border-radius: 5px;
-      border: solid white 2px;
-      transition: 300ms;
-
-
-      &:hover {
-        background-color: white;
-        color: $colorPrimary;
-        cursor: pointer;
-      }
+    &:hover {
+      //background-color: white;
+      //color: $colorPrimary;
+      cursor: pointer;
+      border-radius: 60px;
+      //width: 160px;
     }
   }
 }
@@ -466,14 +461,37 @@ body {
       //transition: 500ms;
 
       &:hover {
-        background-color: rgba(black, 0.1);
+        //background-color: rgba(black, 0.1);
+
       }
     }
   }
 }
 
+.indicator {
+  background-color: black;
+  height: 6px;
+  width: 10px;
+  margin-top: -6px;
+  border-radius: 10px 10px 0px 0px;
+  transition: 300ms;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0;
+}
+
+.i-home {
+  background-color: white;
+}
+
+.i-home-active {
+  background-color: white;
+}
+
 .active {
-  border-bottom: solid $colorPrimary 4px;
+  width: 100%;
+  background-color: $colorPrimary;
+  opacity: 1;
 }
 
 .content {
@@ -506,7 +524,7 @@ body {
   .content-row {
     width: 70%;
     margin: 45px auto;
-    height: auto;
+    height:auto;
     left: 0px;
     right: 0px;
     //background-color: gray;
@@ -598,7 +616,7 @@ body {
       }
 
       p {
-        color: rgba(black, 0.5);
+        color: rgba(black,0.5);
         transition: 500ms;
         border-radius: 0px 0px 25px 25px;
         //padding: 0px 20px 20px 20px;
@@ -619,27 +637,27 @@ body {
       }
 
       #residential {
-        background-image: url("../res/house(teal).png");
+        background-image: url("../res/icons/house.png");
       }
 
       #automotive {
-        background-image: url("../res/car(teal).png");
+        background-image: url("../res/icons/car.png");
       }
 
       #commercial {
-        background-image: url("../res/business(teal).png");
+        background-image: url("../res/icons/business.png");
       }
 
       #hours {
-        background-image: url("../res/clock(teal).png");
+        background-image: url("../res/icons/clock.png");
       }
 
       #support {
-        background-image: url("../res/key(teal).png");
+        background-image: url("../res/icons/key.png");
       }
 
       #mobile {
-        background-image: url("../res/mobile(teal).png");
+        background-image: url("../res/icons/mobile.png");
       }
     }
 
@@ -841,7 +859,7 @@ body {
         margin: 5px;
         height: 20px;
         width: 20px;
-        background-image: url("../res/star(yellow).png");
+        background-image: url("../res/icons/star(yellow).png");
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
@@ -864,9 +882,7 @@ body {
     background-color: #BDBDBD;
   }
 
-}
-
-//end of content
+} //end of content
 
 .footer {
   background-color: $colorPrimary;
@@ -901,26 +917,28 @@ body {
   }
 
   #facebook {
-    background-image: url("../res/fb.svg");
+    background-image: url("../res/icons/fb.svg");
   }
 
   #google-plus {
-    background-image: url("../res/gplus.svg");
+    background-image: url("../res/icons/gplus.svg");
   }
 
   #twitter {
-    background-image: url("../res/twitter.svg");
+    background-image: url("../res/icons/twitter.svg");
   }
 
   .footer-logo {
     //background-color: red;
-    width: 250px;
-    height: 60px;
-    background-image: url("../res/lukes-locks(white-new).png");
+    width: 180px;
+    height: 90px;
+    background-image: url("../res/logo(white).png");
     background-position: center;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
-    margin-top: 60px;
+    margin-top: 45px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   a {
@@ -978,22 +996,22 @@ body {
 }
 
 #banner-residential {
-  background: url("../res/banner2(dark).jpg") no-repeat center fixed;
-  background-size: cover;
+  /*background: url("../res/banner2(dark).jpg") no-repeat center fixed;
+  background-size: cover;*/
 }
 
 #banner-commercial {
-  background: url("../res/banner1.jpg") no-repeat center fixed;
-  background-size: cover;
+  /*background: url("../res/banner1.jpg") no-repeat center fixed;
+  background-size: cover;*/
 }
 
 #banner-automotive {
-  background: url("../res/banner3(dark).jpg") no-repeat center fixed;
-  background-size: cover;
+  /*background: url("../res/banner3(dark).jpg") no-repeat center fixed;
+  background-size: cover;*/
 }
 
 .banner-secondary {
-  background-color: #BDBDBD;
+  background-color: $colorPrimary;
   width: 100%;
   height: 500px;
   margin-top: $navHeight + $topbarHeight;
@@ -1002,7 +1020,7 @@ body {
     text-align: center;
     padding-top: 280px;
     color: white;
-    width: 550px;
+    width: 450px;
     margin-left: auto;
     margin-right: auto;
     line-height: 25px;
@@ -1016,25 +1034,37 @@ body {
   }
 
   #residential {
-    background-image: url("../res/house(teal).png");
+    background-image: url("../res/icons/house.svg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    filter: invert(1);
   }
 
   #commercial {
-    background-image: url("../res/business(teal).png");
+    background-image: url("../res/icons/case.svg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    filter: invert(1);
   }
 
   #automotive {
-    background-image: url("../res/car.png(teal)");
+    background-image: url("../res/icons/bus.svg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    filter: invert(1);
   }
+
+  #home {
+    background-image: url("../res/icons/lock.svg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: invert(1);
+  }
+
 
   .inner-banner {
     position: absolute;
@@ -1147,20 +1177,156 @@ body {
   }
 
   #facebook {
-    background-image: url("../res/fb.svg");
+    background-image: url("../res/icons/fb.svg");
   }
 
   #google-plus {
-    background-image: url("../res/gplus.svg");
+    background-image: url("../res/icons/gplus.svg");
   }
 
   #twitter {
-    background-image: url("../res/twitter.svg");
+    background-image: url("../res/icons/twitter.svg");
   }
 }
 
 .mobile-banner {
   display: none;
+}
+
+//----------new banner animation----------
+
+body {
+  background: #2688d1;
+}
+
+/* leaf animations */
+
+#leaves {
+  position: relative;
+  top: -100px;
+  width: 100%;
+  text-align: left;
+}
+
+#leaves i {
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    z-index: 1;
+    -webkit-animation: falling 5s 0s infinite;
+}
+
+#leaves i:nth-of-type(2n) {
+  -webkit-animation: falling2 5s 0s infinite;
+}
+
+#leaves i:nth-of-type(3n) {
+  -webkit-animation: falling3 5s 0s infinite;
+}
+
+#leaves i:nth-of-type(n) { height:23px; width:30px; }
+#leaves i:nth-of-type(n):before { width:7px; height:5px; top:17px; right:1px; }
+#leaves i:nth-of-type(n):after { width:2px; height:17px; left: 12px; top:0px; }
+
+#leaves i:nth-of-type(2n+1)    { height:40px; width:40px; }
+#leaves i:nth-of-type(2n+1):before { width:20px; height:20px; top:7px; left:0px; }
+#leaves i:nth-of-type(2n+1):after { width:2px; height:6px; right: 5px; top:1px; }
+
+#leaves i:nth-of-type(3n+2)  { height:17px; width:23px; }
+#leaves i:nth-of-type(3n+2):before  { height:4px; width:4px; top:12px; left:1px; }
+#leaves i:nth-of-type(3n+2):after  { height:10px; width:2px; top:1px; right:8px; }
+
+#leaves i:nth-of-type(n)   { -webkit-animation-delay: 1.9s;}
+#leaves i:nth-of-type(2n)  { -webkit-animation-delay: 3.9s;}
+#leaves i:nth-of-type(3n)  { -webkit-animation-delay: 2.3s;}
+#leaves i:nth-of-type(4n)  { -webkit-animation-delay: 4.4s;}
+#leaves i:nth-of-type(5n)  { -webkit-animation-delay: 5s;  }
+#leaves i:nth-of-type(6n)  { -webkit-animation-delay: 3.5s;}
+#leaves i:nth-of-type(7n)  { -webkit-animation-delay: 2.8s;}
+#leaves i:nth-of-type(8n)  { -webkit-animation-delay: 1.5s;}
+#leaves i:nth-of-type(9n)  { -webkit-animation-delay: 3.3s;}
+#leaves i:nth-of-type(10n) { -webkit-animation-delay: 2.5s;}
+#leaves i:nth-of-type(11n) { -webkit-animation-delay: 1.2s;}
+#leaves i:nth-of-type(12n) { -webkit-animation-delay: 4.1s;}
+#leaves i:nth-of-type(13n) { -webkit-animation-delay: 1s;  }
+#leaves i:nth-of-type(14n) { -webkit-animation-delay: 4.7s;}
+#leaves i:nth-of-type(15n) { -webkit-animation-delay: 3s;  }
+
+#leaves i:nth-of-type(n) {
+  background-image: url("https://openclipart.org/image/2400px/svg_to_png/310568/1542668334.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: invert(1);
+}
+
+#leaves i:nth-of-type(2n+2) {
+  background-image: url("http://simpleicon.com/wp-content/uploads/key-5.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: invert(1);
+}
+
+#leaves i:nth-of-type(4n+1) {
+  background-image: url("https://cdn3.iconfinder.com/data/icons/wpzoom-developer-icon-set/500/104-512.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  filter: invert(1);
+}
+
+#leaves i:nth-of-type(n) { opacity: .7;}
+#leaves i:nth-of-type(3n+1) { opacity: .5;}
+#leaves i:nth-of-type(3n+2) { opacity: .3;}
+
+#leaves i:nth-of-type(n) {transform: rotate(180deg);}
+
+#leaves i:nth-of-type(n) {-webkit-animation-timing-function:ease-in-out;}
+
+@-webkit-keyframes falling {
+  0% {
+    -webkit-transform:
+    translate3d(300,0,0)
+    rotate(0deg);
+  }
+
+  100% {
+    -webkit-transform:
+    translate3d(350px,700px,0)
+    rotate(90deg);
+    opacity: 0.3;
+  }
+}
+
+@-webkit-keyframes falling3 {
+  0% {
+    -webkit-transform:
+    translate3d(0,0,0)
+    rotate(-20deg);
+  }
+
+  100% {
+    -webkit-transform:
+    translate3d(230px,640px,0)
+    rotate(-70deg);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes falling2 {
+  0% {
+    -webkit-transform:
+    translate3d(0,0,0)
+    rotate(90deg);
+  }
+
+  100% {
+    -webkit-transform:
+    translate3d(400px,680px,0)
+    rotate(0deg);
+    opacity: 0.3;
+  }
 }
 
 //------------------------------mobile styles----------------------------------
@@ -1174,18 +1340,35 @@ body {
     font-size: 9px;
   }
 
+  .subtitle {
+    display: none;
+  }
+
+  #call {
+    top: 340px;
+  }
+
+  #quote {
+    top: 340px;
+  }
+
+  #banner-commerial {
+    background-color: $colorPrimary;
+    background-image: none;
+  }
+
   .logo {
     position: absolute;
-    background-image: url("../res/lukes-locks(dark-new).png") !important;
+    background-image: url("../res/logo(dark).png") !important;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    width: 150px !important;
-    height: 75px !important;
+    width: 100px !important;
+    height: 55px !important;
     margin: auto !important;
     left: 30px !important;
     right: 100% !important;
-    top: 0px !important;
+    top: 15px !important;
     transition: 500ms;
   }
 
@@ -1200,12 +1383,17 @@ body {
     width: 100%;
     text-align: center;
     top: $topbarHeight;
-    box-shadow: 0px 10px 25px 0px rgba(0, 0, 0, 0.2);
+    //box-shadow: 0px 10px 25px 0px rgba(0,0,0,0.2);
     transition: 300ms;
     z-index: 20;
 
     .nav-links {
       display: none;
+      opacity: 1;
+
+      .indicator {
+        opacity: 0;
+      }
 
       ul {
         display: block;
@@ -1263,7 +1451,7 @@ body {
   .content-home {
     width: 100%;
     padding-top: 20px;
-    top: 200px + $navHeight + $topbarHeight;
+    top: 350px + $navHeight + $topbarHeight;
   }
 
   .card-container {
@@ -1350,6 +1538,10 @@ body {
     margin-left: auto;
     margin-right: auto;
 
+    .quote-forms {
+      padding-bottom: 110px !important;
+    }
+
     .service-box-text {
       border-radius: 15px 15px 0px 0px;
 
@@ -1407,9 +1599,8 @@ body {
     grid-template-columns: 1fr !important;
 
     .footer-logo {
-      //background-color: red;
-      width: 100% !important;
       margin-bottom: 40px;
+      background-size: cover;
     }
   }
 
@@ -1446,14 +1637,15 @@ body {
   }
 
   .banner-secondary {
-    //display: none;
+    display: block;
     width: 100%;
-    height: 350px;
+    height: 350px !important;
     background-attachment: fixed;
 
     h2 {
       font-size: 24px;
       font-weight: bold;
+      color: white;
     }
 
     .title-icon {
@@ -1470,8 +1662,8 @@ body {
     }
 
     p {
-      width: 70%;
-      padding-top: 145px;
+      width: 60%;
+      padding-top: 135px;
       opacity: 0.8;
     }
   }
@@ -1481,6 +1673,12 @@ body {
     margin: 0px;
     padding-top: 50px;
     line-height: 40px;
+
+    span {
+      font-size: 18px;
+      line-height: 40px;
+      margin-left: 15px;
+    }
 
     .service-box-text {
       padding: 0px;
@@ -1495,8 +1693,8 @@ body {
     }
 
     .social-bubble {
-      width: 40px;
-      height: 40px;
+      width: 30px;
+      height: 30px;
     }
 
     .title-icon {
@@ -1505,6 +1703,7 @@ body {
     }
 
     h3 {
+      display: block;
       font-size: 24px;
       margin-left: 0px;
       margin-right: 0px;
@@ -1536,81 +1735,13 @@ body {
 
   .mobile-banner {
     display: block;
-    height: 200px;
+    height: 350px;
     width: 100%;
     margin-top: $navHeight + $topbarHeight;
-    background-image: url("../res/banner1.jpg");
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-
-    .subtitle {
-      position: absolute;
-      left: 0px;
-      right: 0px;
-      margin: auto;
-      text-align: center;
-      color: white;
-      top: 120px;
-      line-height: 20px;
-    }
-
-    .banner-button-container {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      justify-items: center;
-      grid-gap: 11px;
-      position: absolute;
-      left: 0px;
-      right: 0px;
-      margin: auto;
-      top: 220px;
-      width: 280px;
-
-
-      .banner-button-cta {
-        position: relative;
-        text-decoration: none;
-        text-align: center;
-        width: 130px;
-        height: 40px;
-        color: white;
-        background-color: $colorPrimary;
-        line-height: 40px;
-        font-weight: bolder;
-        border-radius: 5px;
-        border: solid $colorPrimary 2px;
-        transition: 300ms;
-
-
-        &:hover {
-          background-color: white;
-          color: $colorPrimary;
-          cursor: pointer;
-        }
-      }
-
-      .banner-button {
-        position: relative;
-        text-align: center;
-        width: 130px;
-        height: 40px;
-        color: white;
-        line-height: 40px;
-        font-weight: bolder;
-        border-radius: 5px;
-        border: solid white 2px;
-        transition: 300ms;
-
-
-        &:hover {
-          background-color: white;
-          color: $colorPrimary;
-          cursor: pointer;
-        }
-      }
-    }
   }
 }
 

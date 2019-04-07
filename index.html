@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <!--
 Developer: Trent Brew
-Description: Markup for lukeslocks.com
+Description: Markup for quickkeys.com
 -->
 <html>
   <head>
-    <title>Quick Keys | Mobile 24/7 Locksmith | Home</title>
+    <title>Quick Keys | Home</title>
     <meta charset="utf-8" content="width=device-width, initial-scale=1" name="viewport"/>
     <link rel="icon" href="res/lock.png"/>
     <link type="text/css" rel="stylesheet" href="styles/compiled-styles.css"/>
@@ -17,13 +17,30 @@ Description: Markup for lukeslocks.com
   </head>
   <body>
     <div class="top-bar">Luke Christisen | Mobile Locksmith<div class="phone-icon"></div>314-660-7211<div class="email-icon"></div>luke2christisen@gmail.com</div>
-    <div class="banner">
-
+    <div class="banner-container">
+      <div class="banner-container">
+        <div id="leaves">
+          <i></i>
+          <i></i>
+          <i></i>
+          <i></i>
+          <i></i>
+          <i></i>
+          <i></i>
+          <i></i>
+          <i></i>
+          <i></i>
+          <i></i>
+          <i></i>
+          <i></i>
+          <i></i>
+          <i></i>
+        </div>
+      </div>
       <div class="subtitle"><p>Quick Keys is a Residential, Automotive and commercial mobile Locksmith service based in <strong>St. Louis.</strong></p></div>
-
       <div class="banner-button-container">
-        <a href="tel:+13146607211" class="banner-button-cta">Call Now</a>
-        <div class="banner-button">Get a quote</div>
+        <div class="banner-button" id="call">Call now</div>
+        <div class="banner-button" id="quote">Get a quote</div>
       </div>
       <div class="arrow-container"><div class="arrow arrow1"></div><div class="arrow arrow2"></div></div>
     </div>
@@ -31,22 +48,19 @@ Description: Markup for lukeslocks.com
       <div class="logo"></div>
       <div class="nav-links">
         <ul>
-          <a href="index.html" class="active"><li>Home</li></a>
-          <a href="residential.html"><li>Residential</li></a>
-          <a href="automotive.html"><li>Automotive</li></a>
-          <a href="commercial.html"><li>Commercial</li></a>
-          <a href="contact.html"><li>Contact</li></a>
+          <a href="index.html"><li>Home</li><div class="indicator active i-home-active"></div></a>
+          <a href="residential.html"><li>Residential</li><div class="indicator i-home"></div></a>
+          <a href="automotive.html"><li>Automotive</li><div class="indicator i-home"></div></a>
+          <a href="commercial.html"><li>Commercial</li><div class="indicator i-home"></div></a>
+          <a href="contact.html"><li>Contact</li><div class="indicator i-home"></div></a>
         </ul>
       </div>
       <div class="menu-button"></div>
     </div>
 
-    <div class="mobile-banner">
-      <div class="subtitle"><p>Quick Keys is a Residential, Automotive and commercial mobile Locksmith service based in <strong>St. Louis.</strong></p></div>
-      <div class="banner-button-container">
-        <a href="tel:+13146607211" class="banner-button-cta">Call Now</a>
-        <div class="banner-button">Get a quote</div>
-      </div>
+    <div id="banner-commercial" class="banner-secondary mobile-banner">
+      <div class="inner-banner"><h2><div class="title-icon" id="home"></div>St. Louis Locksmith</h2></div>
+      <p>Quick Keys is a Residential, Automotive and commercial mobile Locksmith service based in <strong>St. Louis.</strong> Get a quote by scrolling below, or call <strong>314-660-7211.</strong></p>
     </div>
 
     <div class="content-home">
@@ -57,7 +71,7 @@ Description: Markup for lukeslocks.com
             <div class="icon" id="hours"></div>
             <div class="card-text">
               <h2>24 Hour Service</h2>
-              <p>Quick Keys provide 24 hour emergency locksmith service. We understand that unfortunate circumstances can occur at all hours of the day and night and need to be resolved as soon as possible.  Rest assured Luke’s Locks is here to help you at your time of need.</p>
+              <p>Quick Keys provide 24 hour emergency locksmith service. We understand that unfortunate circumstances can occur at all hours of the day and night and need to be resolved as soon as possible.  Rest assured Quick Keys is here to help you at your time of need.</p>
             </div>
           </div>
           <div class="card" id="card5">
@@ -71,7 +85,7 @@ Description: Markup for lukeslocks.com
             <div class="icon" id="mobile"></div>
             <div class="card-text">
               <h2>We're Mobile</h2>
-              <p>Quick Keys locksmiths only utilise the latest, most reliable products available and deliver superior workmanship and affordability to ensure customer satisfaction, and with our fully equipped mobile service van, we offer to most of the St. Louis area.</p>
+              <p>Quick Keys only utilise the latest, most reliable products available and deliver superior workmanship and affordability to ensure customer satisfaction, and with our fully equipped mobile service van, we offer to most of the St. Louis area.</p>
             </div>
           </div>
         </div>
@@ -79,7 +93,7 @@ Description: Markup for lukeslocks.com
       <!-- row 2 (about us) -->
       <div class="content-row about-us">
         <div class="about-us-text">
-          <h2>About Quick Keys</h2>
+          <h2>About Luke's Locks</h2>
           <p>Quick Keys offer you a friendly, reliable and efficient locksmith service at a competitive price. We're completely mobile, and offer our service to most of the St. Louis area. We can help if you’ve locked your keys inside your home, car or office, supply and install both domestic and commercial locks as well as providing key cutting services. Luke’s locksmiths only utilise the latest, most reliable products available and deliver superior workmanship and affordability to ensure customer satisfaction is maintained both now and in the future. If you need a commercial, domestic or automotive locksmith any time of day or night, you can rely on Quick Keys.</p>
         </div>
         <div class="quote-forms">
@@ -158,7 +172,7 @@ Description: Markup for lukeslocks.com
               <div class="star" id="star4"></div>
               <div class="star" id="star5"></div>
             </div>
-            <p>"Quick Keys did a quick and quality job cutting and programming my car key! Highly recommended! I enjoyed Luke's corteous service very much!"</p>
+            <p>"Luke did a quick and quality job cutting and programming my car key! Highly recommended! I enjoyed his corteous service very much!"</p>
           </div>
           <div class="review" id="review4">
             <div class="reviewer-photo"></div>
@@ -170,7 +184,7 @@ Description: Markup for lukeslocks.com
               <div class="star" id="star4"></div>
               <div class="star" id="star5"></div>
             </div>
-            <p>"I was visiting from out of town and needed a spare key for my 2012 Sierra. I called Quick Keys and Luke had my key ready in less than 5 minutes! He is very professional and did a great job!"</p>
+            <p>"I was visiting from out of town and needed a spare key for my 2012 Sierra. I called Luke's Locksmithing and he had my key ready in less than 5mins! He is very professional and did a great job!"</p>
           </div>
         </div>
       </div>
@@ -204,7 +218,7 @@ Description: Markup for lukeslocks.com
           </div>
         </div>
       </div>
-      <div class="sub-footer"><span>© Copyright 2019 Quick Keys | All Rights Reserved | Site Developed by </span><a href="#">Trent Brew</a></div>
+      <div class="sub-footer"><span>© Copyright 2019 Luke's Locks | All Rights Reserved | Site Developed by </span><a href="http://trentbrew.com">Trent Brew</a></div>
     </div>
   </body>
 </html>

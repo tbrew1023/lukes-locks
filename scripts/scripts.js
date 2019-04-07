@@ -7,7 +7,7 @@ var menuActive = false;
 var scrollLimit = 650;
 var navHeight = 80;
 var topbarHeight = 30;
-var fadeRate = .002;
+var fadeRate = .0025;
 var clearVal = 0;
 
 var bannerImages = ["res/banner1.jpg","res/lukes-locks-full.png"];
@@ -29,6 +29,9 @@ function toggleMenu() {
     $(".nav").css("height", "100vh");
     $(".nav-secondary").css("height", "100vh");
     $(".menu-button").css("background-image", "url('https://cdn2.iconfinder.com/data/icons/media-controls-5/100/close-512.png')");
+    setTimeout(function() {
+      $("#mobile-link1").css('opacity','1');
+    }, 1000);
   }
 }
 
@@ -47,52 +50,80 @@ function unlockNav() {
   $(".nav").css({
     "position":"absolute",
     "top":scrollLimit - navHeight + "px",
-    "background-color":"rgba(0,0,0,0)"
+    "background-color":"rgba(0,0,0,0)",
+    "box-shadow":"none"
   });
 }
 
 function swoopLogo() {
   //console.log("swoopage");
   $(".logo").css({
-    "width":"150px",
-    "height":"75px",
+    "width":"120px",
+    "height":"55px",
     "margin":"auto",
     "left":"30px",
     "right":"100%",
-    "top":"0px",
-    "background-image":"url('res/lukes-locks(dark-new).png')"
+    "top":"12px",
+    "background-image":"url('res/logo(dark).png')"
   });
 
-  $(".nav a").css({
+  /*$(".nav a").css({
     "color":"black"
+  });*/
+
+  $(".nav .indicator").css({
+    "background-color":"black"
+  });
+
+  $(".active").css({
+    "background-color":"#0288d1"
   });
 }
 
 function unswoopLogo() {
   //console.log("swoopage");
   $(".logo").css({
-    "width":"400px",
+    "width":"350px",
     "height":"200px",
     "margin":"auto",
     "left":"0px",
     "right":"0px",
     "top":"-450px",
-    "background-image":"url('res/lukes-locks(light-new).png')"
+    "background-image":"url('res/logo(white).png')"
   });
 
   $(".nav a").css({
     "color":"white"
   });
+
+  $(".nav .indicator").css({
+    "background-color":"white"
+  });
+
+  $(".active").css({
+    "background-color":"white"
+  });
 }
 
 function fadeBanner(scroll) {
   clearVal = (scroll * fadeRate);
-  $(".banner").css({
-    'background':'linear-gradient(rgba(255,255,255,' + clearVal + '),rgba(255,255,255,' + clearVal + ')),url(' + bannerImages[0] + ')',
-    'background-size':'cover',
-    'background-attachment':'fixed',
-    'background-position':'center'
+  $(".banner-container").css({
+    'background':'linear-gradient(rgba(179,229,252,' + clearVal + '),rgba(255,255,255,' + clearVal + ')),url()'
   });
+
+  $(".nav-links a").css({
+    "color":"rgb(" + (255 - scroll) + "," + (255 - scroll) + "," + (255 - scroll) + ")"
+  });
+
+  $(".subtitle").css({
+    "opacity": 1 - (clearVal)
+  });
+
+  $(".banner-button").css({
+    "opacity": 1 - (clearVal)
+  });
+
+  console.log("scroll: " + scroll);
 }
 
 function scrollingUp() {
@@ -113,14 +144,19 @@ function scrollingDown() {
   }
 }
 
+function animateIndicator() {
+  $('.indicator').css({
+    'width':'100%'
+  });
+}
+
 //----------------------------------events-------------------------------------
 
 $(window).ready(function() {
-  console.log("the window is ready");
-  //test for working script
+  console.log("the window is ready"); //test for working script
 
   //auto scroll animation for quote button
-  $(".banner-button").click(function (){
+  $(".banner-button").click(function () {
     $('html, body').animate({
         scrollTop: $(".about-us").offset().top - 175
     }, 2000);
@@ -138,6 +174,38 @@ $(window).ready(function() {
     console.log("button clicked");
     toggleMenu();
   });
+
+  $(".nav-links a").hover(
+    function() {
+      //mouse-on
+      $(this).find(".indicator").css({
+        "width":"100%",
+        "opacity":"1"
+      });
+    },
+    function() {
+      $(this).find(".indicator").css({
+        "width":"10px",
+        "opacity":"0"
+      });
+    }
+  );
+  //no animation for active tab
+  $(".nav-links a").hover(
+    function() {
+      //mouse-on
+      $(this).find(".active").css({
+        "width":"100%",
+        "opacity": "1"
+      });
+    },
+    function() {
+      $(this).find(".active").css({
+        "width":"100%",
+        "opacity":"1"
+      });
+    }
+  );
 });
 
 $(window).scroll(function() {
@@ -156,7 +224,7 @@ $(window).scroll(function() {
       unlockNav();
     }
 
-    if(scroll >= 170) { //animates logo if user scrolls past 250px
+    if(scroll >= 110) { //animates logo if user scrolls past 250px
       swoopLogo();
     }
     else {
