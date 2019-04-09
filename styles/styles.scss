@@ -1011,7 +1011,7 @@ body {
 }
 
 .banner-secondary {
-  background-color: $colorPrimary;
+  background: linear-gradient($colorPrimary, $colorPrimaryDark) !important;
   width: 100%;
   height: 500px;
   margin-top: $navHeight + $topbarHeight;
@@ -1031,6 +1031,7 @@ body {
     width: 120px;
     height: 120px;
     margin-right: 20px;
+    opacity: 0.5;
   }
 
   #residential {
@@ -1125,6 +1126,8 @@ body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   #contact-email {
@@ -1132,6 +1135,8 @@ body {
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .service-box-text p {
@@ -1589,6 +1594,7 @@ body {
     height: auto;
     text-align: center;
     padding-bottom: 80px;
+    //background-color: yellow;
   }
 
   ul {

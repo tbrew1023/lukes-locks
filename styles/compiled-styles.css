@@ -683,7 +683,7 @@ body {
   background-size: cover;*/ }
 
 .banner-secondary {
-  background-color: #0288d1;
+  background: linear-gradient(#0288d1, #005b9f) !important;
   width: 100%;
   height: 500px;
   margin-top: 110px; }
@@ -698,7 +698,8 @@ body {
   .banner-secondary .title-icon {
     width: 120px;
     height: 120px;
-    margin-right: 20px; }
+    margin-right: 20px;
+    opacity: 0.5; }
   .banner-secondary #residential {
     background-image: url("../res/icons/house.svg");
     background-position: center;
@@ -765,12 +766,16 @@ body {
     background-image: url("../res/baseline-call-24px.svg");
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto; }
   .contact-box #contact-email {
     background-image: url("../res/baseline-email-24px.svg");
     background-position: center;
     background-size: cover;
-    background-repeat: no-repeat; }
+    background-repeat: no-repeat;
+    margin-left: auto;
+    margin-right: auto; }
   .contact-box .service-box-text p {
     background-color: #0288d1;
     color: white; }
